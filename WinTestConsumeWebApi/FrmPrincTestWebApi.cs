@@ -20,7 +20,7 @@ namespace WinTestConsumeWebApi
 
         private void InitMyComponents()
         {
-            throw new NotImplementedException();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
     }
 }
