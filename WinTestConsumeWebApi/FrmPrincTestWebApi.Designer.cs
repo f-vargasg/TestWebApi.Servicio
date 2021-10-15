@@ -36,7 +36,7 @@ namespace WinTestConsumeWebApi
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtOutput = new System.Windows.Forms.TextBox();
             this.tlsStrMenuPrinc = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.tlsStrButTest = new System.Windows.Forms.ToolStripButton();
             this.tlsStrButExit = new System.Windows.Forms.ToolStripButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -46,26 +46,28 @@ namespace WinTestConsumeWebApi
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 35);
+            this.label1.Location = new System.Drawing.Point(35, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 17);
+            this.label1.Size = new System.Drawing.Size(28, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Url:";
             // 
             // txtUrl
             // 
             this.txtUrl.Location = new System.Drawing.Point(99, 32);
+            this.txtUrl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(446, 22);
+            this.txtUrl.Size = new System.Drawing.Size(447, 22);
             this.txtUrl.TabIndex = 1;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.txtUrl);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(2, 12);
+            this.panel1.Location = new System.Drawing.Point(3, 12);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(898, 124);
+            this.panel1.Size = new System.Drawing.Size(899, 124);
             this.panel1.TabIndex = 2;
             // 
             // panel2
@@ -74,9 +76,10 @@ namespace WinTestConsumeWebApi
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.txtOutput);
-            this.panel2.Location = new System.Drawing.Point(2, 142);
+            this.panel2.Location = new System.Drawing.Point(3, 142);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(898, 364);
+            this.panel2.Size = new System.Drawing.Size(899, 364);
             this.panel2.TabIndex = 3;
             // 
             // txtOutput
@@ -84,7 +87,8 @@ namespace WinTestConsumeWebApi
             this.txtOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtOutput.Location = new System.Drawing.Point(3, 3);
+            this.txtOutput.Location = new System.Drawing.Point(3, 2);
+            this.txtOutput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOutput.Multiline = true;
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.Size = new System.Drawing.Size(895, 358);
@@ -94,22 +98,24 @@ namespace WinTestConsumeWebApi
             // 
             this.tlsStrMenuPrinc.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.tlsStrMenuPrinc.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.tlsStrButTest,
             this.tlsStrButExit});
             this.tlsStrMenuPrinc.Location = new System.Drawing.Point(0, 0);
             this.tlsStrMenuPrinc.Name = "tlsStrMenuPrinc";
-            this.tlsStrMenuPrinc.Size = new System.Drawing.Size(902, 31);
+            this.tlsStrMenuPrinc.Size = new System.Drawing.Size(901, 27);
             this.tlsStrMenuPrinc.TabIndex = 4;
             this.tlsStrMenuPrinc.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // tlsStrButTest
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 28);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.tlsStrButTest.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tlsStrButTest.Image = ((System.Drawing.Image)(resources.GetObject("tlsStrButTest.Image")));
+            this.tlsStrButTest.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tlsStrButTest.Name = "tlsStrButTest";
+            this.tlsStrButTest.Size = new System.Drawing.Size(24, 24);
+            this.tlsStrButTest.Text = "toolStripButton1";
+            this.tlsStrButTest.ToolTipText = "Test";
+            this.tlsStrButTest.Click += new System.EventHandler(this.tlsStrButTest_Click);
             // 
             // tlsStrButExit
             // 
@@ -117,7 +123,7 @@ namespace WinTestConsumeWebApi
             this.tlsStrButExit.Image = ((System.Drawing.Image)(resources.GetObject("tlsStrButExit.Image")));
             this.tlsStrButExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tlsStrButExit.Name = "tlsStrButExit";
-            this.tlsStrButExit.Size = new System.Drawing.Size(29, 28);
+            this.tlsStrButExit.Size = new System.Drawing.Size(24, 24);
             this.tlsStrButExit.Text = "toolStripButton2";
             this.tlsStrButExit.ToolTipText = "Exit";
             this.tlsStrButExit.Click += new System.EventHandler(this.tlsStrButExit_Click);
@@ -126,10 +132,12 @@ namespace WinTestConsumeWebApi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 503);
+            this.ClientSize = new System.Drawing.Size(901, 503);
             this.Controls.Add(this.tlsStrMenuPrinc);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmPrincTestWebApi";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -151,7 +159,7 @@ namespace WinTestConsumeWebApi
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtOutput;
         private System.Windows.Forms.ToolStrip tlsStrMenuPrinc;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton tlsStrButTest;
         private System.Windows.Forms.ToolStripButton tlsStrButExit;
     }
 }

@@ -53,5 +53,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestWebApi.BE\TestWebApi.BE.csproj">
+      <Project>{c53e7c30-a796-4738-83ac-8316172ffb3f}</Project>
+      <Name>TestWebApi.BE</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

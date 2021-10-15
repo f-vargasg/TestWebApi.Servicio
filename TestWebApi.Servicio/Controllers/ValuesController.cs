@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TestWebApi.BE;
 
 namespace TestWebApi.Servicio.Controllers
 {
@@ -38,9 +39,21 @@ namespace TestWebApi.Servicio.Controllers
 
         // GET api/values/TestGet
         [Route("api/values/GetTestFunc")]
-        public string GetTestFunc(string pValor)
+        public GeneralResponseBE<string> GetTestFunc(string pValor)
         {
-            return "El Valor es: " + pValor;
+
+            GeneralResponseBE<string> generalResponseBE = new GeneralResponseBE<string>();
+            try
+            {
+                generalResponseBE.Data = "El Valor es: " + pValor;
+            }
+            catch (Exception)
+            {
+                throw new HttpResponseException(Request.CreateErrorResponse(System.Net.HttpStatusCode.ExpectationFailed, "No hay datos de respuesta."));
+            }
+
+
+            return generalResponseBE;
         }
     }
 }

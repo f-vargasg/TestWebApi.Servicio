@@ -80,5 +80,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestWebApi.BE\TestWebApi.BE.csproj">
+      <Project>{c53e7c30-a796-4738-83ac-8316172ffb3f}</Project>
+      <Name>TestWebApi.BE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestWebApi.BL\TestWebApi.BL.csproj">
+      <Project>{5b8f459a-8eaf-4d99-a4ff-9634787f689e}</Project>
+      <Name>TestWebApi.BL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
