@@ -47,6 +47,7 @@ namespace TestWebApi.BL
             }
             catch (Exception ex)
             {
+                res.StatusResponseCode = System.Net.HttpStatusCode.NotFound;
                 res.OcurrioExcepcion = true;
                 res.Mensaje = "Excepcion en [TestApiBL.TestFunc] " + ex.Message;
             }

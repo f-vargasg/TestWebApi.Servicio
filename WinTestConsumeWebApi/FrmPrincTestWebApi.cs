@@ -28,6 +28,7 @@ namespace WinTestConsumeWebApi
             this.StartPosition = FormStartPosition.CenterScreen;
             string urlBase = ConfigurationManager.AppSettings["urlConn"];
             string uriWapi = ConfigurationManager.AppSettings["uriWapi"];
+            txtMsg.Text = ConfigurationManager.AppSettings["defaultMsg"];
             this.testApiBL = new TestApiBL(urlBase, uriWapi);
         }
 
@@ -39,7 +40,7 @@ namespace WinTestConsumeWebApi
         private void tlsStrButTest_Click(object sender, EventArgs e)
         {
             
-           GeneralResponseBE<string> generalResponseBE =  this.testApiBL.TestFunc("Hola My Friend");
+           GeneralResponseBE<string> generalResponseBE =  this.testApiBL.TestFunc(txtMsg.Text);
 
             if (generalResponseBE.StatusResponseCode == System.Net.HttpStatusCode.OK )
             {

@@ -31,7 +31,7 @@ namespace WinTestConsumeWebApi
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincTestWebApi));
             this.label1 = new System.Windows.Forms.Label();
-            this.txtUrl = new System.Windows.Forms.TextBox();
+            this.txtMsg = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtOutput = new System.Windows.Forms.TextBox();
@@ -48,21 +48,21 @@ namespace WinTestConsumeWebApi
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(35, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 16);
+            this.label1.Size = new System.Drawing.Size(77, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Url:";
+            this.label1.Text = "Mensaje:";
             // 
-            // txtUrl
+            // txtMsg
             // 
-            this.txtUrl.Location = new System.Drawing.Point(99, 32);
-            this.txtUrl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUrl.Name = "txtUrl";
-            this.txtUrl.Size = new System.Drawing.Size(447, 22);
-            this.txtUrl.TabIndex = 1;
+            this.txtMsg.Location = new System.Drawing.Point(128, 31);
+            this.txtMsg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMsg.Name = "txtMsg";
+            this.txtMsg.Size = new System.Drawing.Size(686, 26);
+            this.txtMsg.TabIndex = 1;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtUrl);
+            this.panel1.Controls.Add(this.txtMsg);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(3, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -112,7 +112,7 @@ namespace WinTestConsumeWebApi
             this.tlsStrButTest.Image = ((System.Drawing.Image)(resources.GetObject("tlsStrButTest.Image")));
             this.tlsStrButTest.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tlsStrButTest.Name = "tlsStrButTest";
-            this.tlsStrButTest.Size = new System.Drawing.Size(24, 24);
+            this.tlsStrButTest.Size = new System.Drawing.Size(29, 24);
             this.tlsStrButTest.Text = "toolStripButton1";
             this.tlsStrButTest.ToolTipText = "Test";
             this.tlsStrButTest.Click += new System.EventHandler(this.tlsStrButTest_Click);
@@ -123,14 +123,14 @@ namespace WinTestConsumeWebApi
             this.tlsStrButExit.Image = ((System.Drawing.Image)(resources.GetObject("tlsStrButExit.Image")));
             this.tlsStrButExit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tlsStrButExit.Name = "tlsStrButExit";
-            this.tlsStrButExit.Size = new System.Drawing.Size(24, 24);
+            this.tlsStrButExit.Size = new System.Drawing.Size(29, 24);
             this.tlsStrButExit.Text = "toolStripButton2";
             this.tlsStrButExit.ToolTipText = "Exit";
             this.tlsStrButExit.Click += new System.EventHandler(this.tlsStrButExit_Click);
             // 
             // FrmPrincTestWebApi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 503);
             this.Controls.Add(this.tlsStrMenuPrinc);
@@ -154,7 +154,7 @@ namespace WinTestConsumeWebApi
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtUrl;
+        private System.Windows.Forms.TextBox txtMsg;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtOutput;
